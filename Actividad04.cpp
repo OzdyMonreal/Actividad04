@@ -20,6 +20,18 @@ void arreglo() {
   cout << "\nLa suma de los numeros es: " << suma << endl;
   cout << "El promedio del arreglo es: " << suma / 5 << "\n" << endl;
 }
+
+void mostrar(int n, char arreglo[]) {
+  int i = 0;
+  for (i; i < n; i++) {
+    cout << i + 1 << ". ";
+    for (int i = 0; i < strlen(arreglo); i++) {
+      cout << arreglo[i];
+    }
+    cout << "\n";
+  }
+  cout << "\n" << endl;
+}
  
 int main() {
   int opc = 0;
@@ -32,10 +44,20 @@ int main() {
     cout << "Opcion 4: Salir del programa\n" << endl;
     cout << "Ingresa una opcion: "; cin >> opc;
     cout << "**************************\n";
- 
+    fflush(stdin);
     switch (opc) {
     case 1: arreglo(); break;
-    case 2: break;
+    case 2:
+    {
+      int n;
+      char arreglo[20];
+      cout << "Introduce una palabra que quieras: "; cin.getline(arreglo, sizeof(arreglo), '\n');
+      fflush(stdin);
+      cout << "Cuantas veces quiere repetir la palabra?: "; cin >> n;
+      cout << "\n";
+      mostrar(n, arreglo);
+    }
+    break;
     case 3: break;
     case 4:
       cout << "\nSaliendo del programa...";
@@ -45,5 +67,6 @@ int main() {
       cout << "Opcion no valida, ingrese otra vez" << endl;
       break;
     }
+    fflush(stdin);
   }
 }
