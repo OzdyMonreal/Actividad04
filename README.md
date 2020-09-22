@@ -1,5 +1,5 @@
 # Actividad 04
-***Programa de la Actividad 4 de la materia de Estructuras de Datos***
+***Programa de la Actividad 4 de la materia de Estructuras de Datos I y Seminario de Solución de Problemas de Estructuras de Datos***
 
 ## Opciones del programa
 
