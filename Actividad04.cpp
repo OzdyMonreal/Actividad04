@@ -38,7 +38,7 @@ void personajes() {
   {
     char nombre[30];
     char tipo[10];
-    char fuerza;
+    char fuerza[10];
     char salud[15];
   } personajes[5];
   
@@ -49,7 +49,7 @@ void personajes() {
     fflush(stdin);
     cout << "Ingresa el tipo del personaje: "; cin.getline(personajes[i].tipo, 10, '\n');
     fflush(stdin);
-    cout << "Ingresa la fuerza del personaje: "; cin >> personajes[i].fuerza;
+    cout << "Ingresa la fuerza del personaje: "; cin.getline(personajes[i].fuerza, 10, '\n');
     fflush(stdin);
     cout << "Ingresa la salud del personaje: "; cin.getline(personajes[i].salud, 15, '\n');
   }
